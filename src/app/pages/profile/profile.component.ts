@@ -20,10 +20,8 @@ export class ProfileComponent implements OnInit {
   ngOnInit(): void {
   }
 
-    mostrar( x : number) : void {
+  mostrar( x : number) : void {
     this.posicion = x
-    console.clear()
-    console.log(x)
   }
 
 }
