@@ -1,0 +1,9 @@
+@import '_mixins', '_variables';
+
+.router-outlet {
+    position: relative;
+    min-height: 100vh;
+    margin: 0 auto;
+    overflow-x: hidden;
+    @include flex( column, nowrap, space-between, center );
+}

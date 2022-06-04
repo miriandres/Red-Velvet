@@ -1,0 +1,47 @@
+<main class="notice">
+
+    <div class="wrapper">
+        <h2 class="notice__h2">Notice</h2>
+        <div class="notice__info">
+            <div class="slider">
+                <div 
+                    class="slider__grande"
+                    [ngStyle]="{ 'transform' : desplazar() }">
+                    <ul 
+                        *ngFor="let item of notice; index as i" 
+                        class="slider__panel">
+                        <li 
+                            *ngFor="let subItem of item; index as i"
+                            class="noticia">
+                            <span class="noticia__num">{{ subItem.num }}</span>
+                            <h3 class="noticia__header">{{ subItem.header }}</h3>
+                            <span class="noticia__date">{{ subItem.date }}</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+    
+            <div class="slider__pagination" aria-label="pagination">
+                <img 
+                    class="slider__arrow"
+                    (click)="anterior()"
+                    loading="lazy" 
+                    src="assets/iconos/arrow-left.svg" 
+                    alt="Arrow left">
+
+                <div class="slider__num">
+                    <span class="slider__activo">{{ pag + 1 }}</span>
+                    <span class="slider__span">de</span>
+                    <span>{{ numPags }}</span>
+                </div>
+                <img 
+                    class="slider__arrow"
+                    (click)="siguiente()"
+                    loading="lazy" 
+                    src="assets/iconos/arrow-right.svg" 
+                    alt="Arrow right">
+            </div>
+        </div>
+    </div>
+
+</main>

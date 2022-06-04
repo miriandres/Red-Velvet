@@ -1,0 +1,30 @@
+<main class="main">
+
+    <div class="wrapper">
+        <a 
+            *ngFor="let item of videos; index as i"
+            (mouseover)=" mostrar(i) "
+            (mouseout)=" mostrar(-1) "
+            class="video"
+            [href]=" item.href " 
+            [title]=" item.alt" 
+            target="__blank" 
+            rel="noopener noreferrer">
+
+            <img 
+                [ngClass]="{ 'activo' : foto === i }"
+                class="video__gif" 
+                [src]=" item.gif " 
+                [alt]="item.alt">
+            
+            <picture>
+                <source [srcset]=" item.srcset" type="image/webp">
+                <img 
+                    class="video__img" 
+                    [src]=" item.img" 
+                    [alt]=" item.alt">
+            </picture>
+        </a>
+    </div>
+    
+</main>

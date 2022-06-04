@@ -1,0 +1,101 @@
+@import '_mixins', '_keyframes';
+
+.profile {
+    min-height: 100vh;
+    padding: 0 5.5em;
+    overflow: hidden;
+    @include flex( row, nowrap, center, center );
+
+    @include media(s){
+        padding: 0 3.5em;
+    }
+
+    .wrapper {
+        position: relative;
+        width: 100%;
+        max-width: 1000px;
+        margin: auto;
+        @include flex( row, nowrap, center, center );
+    }
+    .imagen {
+        position: relative;
+        width: 700px;
+        min-height: 700px;
+    
+        @include media(m){
+            transform: scale(.75);
+        }    
+        @include media(s){
+            transform: scale(.45);
+        }
+    
+        map:hover + img {
+            opacity: 1;
+        }
+    
+        &__container {
+            position: absolute;
+            top: 0;
+            animation: fadeInUp 1.5s ease .8s both;
+        }
+        &__silueta {
+            opacity: .7;
+            transition: all .5s ease;
+        
+            &.activo {
+                opacity: 1;
+            }
+        }
+        .yeri {
+            left: 0;
+            z-index: 1;
+        }
+        .seulgi {
+            left: 117px;
+        }
+        .irene {
+            left: 245px;
+        }
+        .joy {
+            left: 361px;
+        }
+        .wendy {
+            left: 505px;
+        }
+    }
+    .info {
+        position: absolute;
+        top: 76%;
+        left: calc(100% - 300px);
+        animation: fadeInUp 1.5s ease 1.2s both;
+        
+        @include media(m){
+            font-size: .9em;
+            left: calc(100% - 480px);
+        } 
+        @include media(s){
+            top: 60%;
+            left: calc(50% - 190px);
+            font-size: .8em;
+            text-align: center;
+        }
+
+        &__profile {
+            position: absolute;
+            width: 380px;
+            padding: 2em;
+            opacity: 0;
+            transition: all .2s ease;
+        }
+        &__profile.activo {
+            opacity: 1;
+        }
+        &__h2 {
+            margin: .5em 0;
+            font-size: 3em;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+    }
+}

@@ -1,0 +1,17 @@
+<ul class="rrss">
+    <li *ngFor="let li of rrss" class="rrss__li">
+        <a 
+            [href]=" li.href " 
+            [title]=" li.title "
+            target="_blank" 
+            rel="noopener noreferrer">
+
+            <img
+                class="rrss__svg" 
+                loading="lazy" 
+                [src]=" li.src" 
+                [alt]=" li.alt ">
+            <span class="rrss__span">{{ li.title }}</span>
+        </a>
+    </li>
+</ul>

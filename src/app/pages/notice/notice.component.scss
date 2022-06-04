@@ -1,0 +1,127 @@
+@import '_mixins', '_keyframes', '_variables';
+
+.notice {
+    position: relative;
+    height: 100vh;
+    padding: 0 5.5em;
+    @include flex( row, nowrap, center, center );
+
+    @include media(600px) {
+        padding: 4em 0 0;
+    }
+
+    .wrapper {
+        width: 100%;
+        max-width: 1000px;
+        margin: auto;
+        @include flex( row, nowrap, center, flex-start );
+
+        @media screen and (orientation: landscape){
+            padding: 8em 0 0;
+        }
+
+        @include media(874px) {
+            width: 85%;
+            flex-flow: column;
+        }
+        @include media(s){
+            width: 100%;
+            font-size: .85em;
+        }
+    }
+
+    &__h2 {
+        width: 25%;
+        font-weight: 600;
+        font-size: 3.2em;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        animation: fadeInUp 1.5s;
+
+        @include media(s){
+            width: 100%;
+            text-align: center;
+            font-size: 2em;
+        }
+    }
+    &__info {
+        width: 70%;
+        animation: fadeInUp 1.5s;
+        border-top: 2px solid var(--black);
+        @include flex( column, nowrap, center, flex-end );
+
+        @include media(874px) {
+            width: 100%;
+            margin: 1em 0 0;
+        }
+        @include media(s){
+            margin: 0;
+        }
+    }
+    .slider {
+        width: 100%;
+        overflow-x: hidden;
+
+        &__grande {
+            width: 300%;
+            transition: all .5s ease;
+            @include flex(row, nowrap, center, center );
+        }
+        &__panel {
+            position: relative;
+            width: calc( 100% / 3 );
+        }
+
+        &__pagination {
+            width: 100px;
+            margin: 1em 0 0;
+            padding: 1em 0;
+            align-self: flex-end;
+            @include flex( row, nowrap, center, center );
+
+            @include media(m){
+                width: 100%;
+                margin: 0;
+            }
+        }
+        &__arrow {
+            width: 1em;
+            transition: all .5s ease;
+            cursor: pointer;
+        }
+        &__num {
+            padding: 0 1.2em;
+        }
+        &__span {
+            margin: 0 .2em;
+        }
+        &__activo {
+            font-weight: bold;
+            color: var(--softpink);
+        }
+    }
+    .noticia {
+        padding: 1.1em .5em;
+        border-bottom: 1px solid lightgray;
+
+        @include media(s){
+            padding: .8em;
+        }
+        
+        &__num {
+            margin-right: 1em;
+            font-weight: bold;
+            color: var(--softpink);
+        }
+        
+        &__header {
+            font-size: .95em;
+            margin: 0 0 .5em 0;
+        }
+
+        &__date {
+            font-size: .8em;
+            color: var(--grey);
+        }
+    }
+}

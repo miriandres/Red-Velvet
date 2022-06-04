@@ -1,0 +1,128 @@
+@import '_mixins', '_keyframes', '_variables';
+
+.discography {
+    position: relative;
+    height: 100vh;
+    padding: 0 5.5em;
+    @include flex( column, nowrap, center, center );
+
+    @include media(m){
+        padding: 0 1em;
+    }
+
+    .wrapper {
+        width: 100%;
+        max-width: 1000px;
+        margin: auto;
+        overflow: hidden;
+    }
+
+    .slider {
+        width: 100%;
+
+        &__puntos {
+            width: 100%;
+            min-height: 50px;
+            animation: fadeInUp 1.5s ease 1 1s both;
+            @include flex( row, nowrap, center, center );
+        }
+        &__punto {
+            width: .6em;
+            height: .6em;
+            margin: 0 .2em;
+            padding: .4em;
+            background: rgba(0, 0, 0, .4);
+            border-radius: 50%;
+            transition: all .5s ease;
+            cursor: pointer;
+            
+            &:hover,
+            &.activo {
+                background: var(--black);
+            }
+        }
+    }
+    .grande {
+        width: 300%;
+        transition: all .8s ease-out;
+        @include flex( row, nowrap, flex-start, flex-start );
+    
+        &__panel {
+            width: calc( 100% / 3 );
+            margin: 0 .95em 0 0;
+            @include grid(3, 1fr, .95em);
+
+            @include media(m){
+                margin: 0 .15em 0;
+                gap: .45em;
+            }
+        }
+    }
+    .slide {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        border-radius: 15px;
+        overflow: hidden;
+        transition: all .8s ease;
+        animation: fadeScale 1.5s ease 1 both;
+        @include flex( column, nowrap, center, center );
+
+        @for $i from 1 through 3{
+            &:nth-child(#{$i}){
+                animation-delay: .4s * ($i / 2);
+            }
+        }
+        
+        &__img {
+            width: 100%;
+            height: 100%;
+        }
+        &__logo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 0 2em;
+            font-size: .9em;
+            color: var(--white);
+            opacity: 0;
+            object-fit: scale-down;
+            transition: all .5s ease;
+            z-index: 5;
+            
+            @include media(m){
+                padding: 0 1em;
+            }
+        }
+        &::after {
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            border-radius: 15px;
+            transition: all .6s ease;
+        }
+
+        $colors: (
+            1: #00a080,
+            2: #9c9be9,
+            3: #f1c14b,
+        );
+        @each $number, $color in $colors {
+            &:nth-child(#{$number})::after{
+                background-color: $color;
+            }
+        }
+        &:hover .slide__logo {
+            opacity: 1;
+        }
+        &:hover::after {
+            opacity: .7;
+        }
+    }
+}

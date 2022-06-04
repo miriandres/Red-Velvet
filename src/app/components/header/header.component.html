@@ -1,0 +1,45 @@
+<header 
+    class="header"
+    (scroll)="onscroll()" 
+    [ngClass]=" {'fixed': isFixed }">
+
+    <h1 class="header__h1">
+        <a 
+            [routerLink]="[ '/' ]"
+            class="header__logo"
+            title="Red Velvet">
+            <img width="100%" height="100%" src="assets/logo.svg" alt="Red Velvet logo">
+            <span class="header__span">Red Velvet</span>
+        </a>
+    </h1>
+    <button 
+        class="btn"
+        [ngClass]="{ 'rotate': toggle }"
+        (click)="toggleBtn()"
+        type="button"
+        aria-label="Menu">
+
+        <span class="btn__line"></span>
+    </button>
+</header>
+
+<!-- SIDE MENU -->
+<div 
+    class="side"
+    [ngClass]="{ 'activo': toggle }">
+
+    <nav class="side__nav">
+        <ul class="side__menu">
+            <li 
+                *ngFor="let item of menu"
+                class="side__li">
+                <a 
+                    [href]="item.route"
+                    [title]=" item.h2 "
+                    class="side__a">{{ item.h2 }}
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <app-rrss></app-rrss>
+</div>

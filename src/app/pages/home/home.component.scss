@@ -1,0 +1,68 @@
+@import '_mixins.scss', '_variables.scss';
+
+.home {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+
+    .lightbox {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: all .5s ease;
+        background: no-repeat top center / cover fixed;
+        
+        &__iconos { 
+            position: fixed;
+            top: calc( 50% - 270px);
+            right: 2.2em;
+            max-width: 100px;
+
+            @include media(s){
+                max-width: 60px;
+                top: auto;
+                bottom: 2em;
+                right: 1em;
+            }
+        }
+        &__icono {
+            margin: .5em 0;
+            opacity: 0.75;
+            border: 1px solid var(--white);
+            transition: 0.5s;
+            cursor: pointer;
+    
+            &.activo,
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+    .lightbox.activo {
+        opacity: 1;
+        transition: opacity 2s ease;
+
+        $group: (
+            "irene"  : 1,
+            "seulgi" : 2,
+            "wendy"  : 3,
+            "joy"    : 4,
+            "yeri"   : 5,
+        );
+        @each $artist, $number in $group {
+            &:nth-child(#{$number}){
+                background-image: url("/assets/img/home/bg-#{$artist}.jpg");
+                background-image: -webkit-image-set(url("/assets/img/home/bg-#{$artist}.webp") 1x);
+                
+                @include media(m){
+                    background-image: url("/assets/img/home/bg-#{$artist}-mobile.jpg");
+                    background-image: -webkit-image-set(url("/assets/img/home/bg-#{$artist}-mobile.webp") 1x);
+                }
+            }
+            
+        }
+    }
+}

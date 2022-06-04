@@ -1,0 +1,22 @@
+<main class="home">
+
+    <div 
+        *ngFor="let item of lightbox; index as i"
+        class="lightbox"
+        [ngClass]="{'activo': posicion === i}"></div>
+
+    <div class="lightbox__iconos">
+        <picture
+            *ngFor="let item of lightbox; index as i">
+            <source type="image/webp" [srcset]=" item.srcset ">
+            <img
+                [ngClass]="{'activo': posicion === i}"
+                (click)="mostrar(i)" 
+                class="lightbox__icono"
+                [src]=" item.src " 
+                [alt]=" item.alt "
+                loading="lazy">
+        </picture>
+    </div>
+
+</main>

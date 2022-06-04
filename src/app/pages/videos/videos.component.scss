@@ -1,0 +1,39 @@
+@import '_mixins', '_keyframes';
+
+.main {
+    position: relative;
+    min-height: 100vh;
+    padding: 0 5.5em;
+    @include flex( row, nowrap, center, center );
+
+    @include media(s){
+        padding: 0 3.5em;
+    }
+
+    .wrapper {
+        width: 100%;
+        max-width: 600px;
+        margin: auto;
+        @include grid(3, 1fr, 0);
+    }
+    .video {
+        position: relative;
+        animation: fadeScale 1.5s ease 1 both;
+
+        @for $i from 1 through 9{
+            &:nth-child(#{$i}){
+                animation-delay: .4s + ($i * .1s);
+            }
+        } 
+        &__gif{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: all .2s ease;
+        }  
+        &__gif.activo{
+            opacity: 1;
+        }    
+    }
+}

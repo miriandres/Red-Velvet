@@ -1,0 +1,37 @@
+@import 'mixins.scss';
+
+.rrss {
+    position: fixed;
+    bottom: 2em;
+    left: 2.2em;
+    z-index: 6;
+    transition: all .5s ease;
+    @include flex( column, nowrap, center, center );
+    
+    @include media(m){
+        width: 300px;
+        position: absolute;
+        left: calc(50% - 150px);
+        flex-direction: row;
+    }
+
+    &__li {
+        margin: 1.5em 0 0;
+        transition: all .3s ease-out;
+
+        @include media(s){
+            margin: 0 .5em 0;
+        }
+
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+    &__svg{
+        width: 1.8em;
+        height: 1.8em;
+    }
+    &__span{
+        display: none;
+    }
+}
