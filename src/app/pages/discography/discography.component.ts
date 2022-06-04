@@ -16,7 +16,6 @@ export class DiscographyComponent implements OnInit {
     private bbdd : BbddService
   ) {
     this.albums = bbdd.albums
-    // console.log(this.albums)
    }
 
   ngOnInit(): void {

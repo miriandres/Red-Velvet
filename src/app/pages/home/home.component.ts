@@ -13,16 +13,15 @@ export class HomeComponent implements OnInit {
 
   constructor(
     private bbdd : BbddService
-  ) {
-        this.lightbox = bbdd.lightbox
-   }
+  ){
+    this.lightbox = bbdd.lightbox
+  }
 
   ngOnInit(): void {
   }
 
   mostrar( x : number) : void {
     this.posicion = x
-    // console.log(x)
   }
 
 }

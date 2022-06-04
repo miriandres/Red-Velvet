@@ -35,8 +35,8 @@ export class NoticeComponent implements OnInit {
   siguiente(){
     this.pag++
     if( this.pag === this.numPags ){
-       this.pag = this.numPags - 1
-     }
+      this.pag = this.numPags - 1
+    }
   }
 
   // Desplazamiento del Slider
