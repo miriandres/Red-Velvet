@@ -1,6 +1,14 @@
 # Red Velvet
 ![banner](https://user-images.githubusercontent.com/86624207/172019382-6e4bb60d-5929-4b51-9d01-38716a50f8e4.png)
-Final project from the JavaScript, JQuery & Angular bootcamp on Trazos.
+
+<div align="center">
+  
+  Final project from the JavaScript, JQuery & Angular bootcamp on Trazos.
+
+  [![Live Site](https://img.shields.io/static/v1?label=&message=Live%20Site&color=fcdfe0&style=for-the-badge)](https://miriandres.github.io/Red-Velvet/)
+  [![Github Repository](https://img.shields.io/static/v1?label=&message=Github%20Repository&color=fcdfe0&style=for-the-badge&logo=github&logoColor=black)](https://github.com/miriandres/Red-Velvet/)
+  
+</div>
 
 ## Author ✒️
 **Miriam Andrés** - *Design & Code*
@@ -14,9 +22,6 @@ Final project from the JavaScript, JQuery & Angular bootcamp on Trazos.
 [![SASS](https://img.shields.io/static/v1?label=&message=SASS&color=CC6699&logo=sass&logoColor=white&style=for-the-badge)](https://www.typescriptlang.org/)
 [![BEM Methodology](https://img.shields.io/static/v1?label=&message=BEM%20Methodology&color=17A1E6&logo=bem&logoColor=white&style=for-the-badge)](http://getbem.com/)
 [![NodeJS](https://img.shields.io/static/v1?label=&message=NodeJS&color=339933&logo=nodedotjs&logoColor=white&style=for-the-badge)](https://nodejs.org/en/)
-
-## Live Demo
-Check out the live demo: [https://miriandres.github.io/Red-Velvet/](https://miriandres.github.io/Red-Velvet/)
 
 ## Components
 ### [Home Page:](https://miriandres.github.io/Red-Velvet/)
