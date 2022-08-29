@@ -8,7 +8,7 @@ import { BbddService } from 'src/app/services/bbdd.service';
 })
 export class ProfileComponent implements OnInit {
 
-  posicion : number = 0
+  position : number = 0
   profile  : any = []
 
   constructor(
@@ -20,8 +20,8 @@ export class ProfileComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  mostrar( x : number) : void {
-    this.posicion = x
+  show( x : number) : void {
+    this.position = x
   }
 
 }
