@@ -3,8 +3,8 @@
     <div class="wrapper">
         <a 
             *ngFor="let item of videos; index as i"
-            (mouseover)=" mostrar(i) "
-            (mouseout)=" mostrar(-1) "
+            (mouseover)=" show(i) "
+            (mouseout)=" show(-1) "
             class="video"
             [href]=" item.href " 
             [title]=" item.alt" 
@@ -12,7 +12,7 @@
             rel="noopener noreferrer">
 
             <img 
-                [ngClass]="{ 'activo' : foto === i }"
+                [ngClass]="{ 'active' : photo === i }"
                 class="video__gif" 
                 [src]=" item.gif " 
                 [alt]="item.alt">
