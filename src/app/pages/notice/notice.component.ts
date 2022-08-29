@@ -23,24 +23,19 @@ export class NoticeComponent implements OnInit {
 // --------------- SLIDER -------------
   numPags = this.notice.length
 
-  // Desplazar Slider hacia atrás
-  anterior(){
+  prevNotice(){
     if( this.pag <= 0){
       this.pag = 1
     }
     this.pag--
   }
-
-  // Desplazar Slider hacia delante
-  siguiente(){
+  nextNotice(){
     this.pag++
     if( this.pag === this.numPags ){
       this.pag = this.numPags - 1
     }
   }
-
-  // Desplazamiento del Slider
-  desplazar() : string {
+  translate() : string {
     this.numPags = this.notice.length
     return 'translateX(-' + (this.pag * ( 100 / this.numPags )) + '%)'
   }
