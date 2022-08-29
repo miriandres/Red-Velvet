@@ -16,7 +16,7 @@
                     <source media="(min-width: 0)" width="100%" height="100%" type="image/webp" [srcset]=" item.webp[0].small ">
                     <source media="(min-width: 0)" width="100%" height="100%" type="image/jpg" [srcset]=" item.jpg[0].small ">
                     <img 
-                        (click)="mostrar(i)"
+                        (click)="show(i)"
                         class="grid__img"
                         [src]=" item.jpg[0].small "
                         [alt]=" item.alt "
@@ -27,9 +27,9 @@
         <div 
             *ngFor="let item of gallery; index as i"
             class="lightbox"
-            [ngClass]="{ 'ver' : foto === i && toggle[i] }">
+            [ngClass]="{ 'show' : photo === i && toggle[i] }">
             
-            <button type="button" aria-label="Close" (click)="mostrar(i)">
+            <button type="button" aria-label="Close" (click)="show(i)">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="lightbox__close" viewBox="0 0 16 16" aria-hidden="true">
                     <path
                         d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
@@ -47,7 +47,7 @@
                 <source media="(min-width: 0)" width="100%" height="100%" type="image/jpg" [srcset]=" item.jpg[0].small ">
 
                 <img
-                    [ngClass]="{ 'ver' : foto === i }"
+                    [ngClass]="{ 'show' : photo === i }"
                     [class]=" item.class2 " 
                     [src]=" item.jpg[0].small" 
                     [alt]=" item.alt"
