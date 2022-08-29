@@ -7,7 +7,7 @@
     width: 100%;
     padding: 1.5em 2.2em;
     background-color: transparent;
-    z-index: 6;
+    z-index: 3;
     @include flex( row, nowrap, space-between, center );
 
     @include media(xxl){
@@ -16,11 +16,11 @@
 
     &.fixed{
         background-color: var(--white);
-        border-bottom: 1px solid var(--grey-400);
+        border-bottom: 1px solid var(--c-grey-400);
     }
     &__logo {
         max-width: 40px;
-        transition: all 0.5s ease;
+        transition: transform 0.5s ease;
         z-index: 2;
 
         @include media(xxl){
@@ -34,9 +34,8 @@
         width: 50px;
         height: 50px;
         padding: 0.8em;
-        border: 1px solid var(--grey-400);
-        transition: all 0.5s ease;
-        z-index: 10;
+        border: 1px solid var(--c-grey-400);
+        z-index: 2;
         cursor: pointer;
         @include flex( column, nowrap, space-between, flex-end );
 
@@ -53,7 +52,7 @@
             background-color: var(--black);
             transform: rotate(0deg);
             transform-origin: bottom right;
-            transition: all 0.3s ease;
+            transition: transform 0.3s ease;
         }
         &:after{
             content: '';
@@ -61,7 +60,7 @@
             width: 25%;
             height: 2px;
             background-color: var(--black);
-            transition: all 0.3s ease;
+            transition: transform 0.3s ease;
             transform: rotate(0deg);
             transform-origin: top right;
         }
@@ -72,7 +71,7 @@
             border-radius: 10px;
             align-self: flex-start;
             transform-origin: bottom right;
-            transition: all 0.3s ease;
+            transition: transform 0.3s ease;
         }
         &.rotate .btn__line {
             transform: rotate(45deg);
@@ -98,13 +97,13 @@
     height: 100%;
     background-color: var(--white);
     transition: all 1s ease;
-    z-index: 5;
+    z-index: 2;
     @include flex( column, nowrap, center, center );
 
-    &.activo {
+    &.active {
         right: 0;
     }
-    &.activo .side__li {
+    &.active .side__li {
         animation: fadeInUp 1s ease 1 both;
 
         @for $i from 1 through 5{
@@ -125,7 +124,6 @@
         font-weight: 600;
         letter-spacing: 0.1em;
         text-transform: uppercase;
-        transition: all 0.5s ease;
         cursor: pointer;
 
         @include media(s){
@@ -134,10 +132,10 @@
     }
     &__a {
         transform: translateX(0);
-        transition: all 0.5s ease;
+        transition: color 0.5s ease, transform 0.5s ease;
 
         &:hover {
-            color: var(--softpink);
+            color: var(--c-accent);
             transform: translateX(15px);
         }
     }
