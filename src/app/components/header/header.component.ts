@@ -14,7 +14,7 @@ export class HeaderComponent implements OnInit {
   isFixed  : boolean = false
 
   @HostListener('window:scroll', ['$event']) onscroll(){
-    let pixel = window.pageYOffset
+    let pixel = window.scrollY
     if(pixel > 5){
       this.isFixed = true
     } else {
@@ -38,5 +38,9 @@ export class HeaderComponent implements OnInit {
     } else {
       this.document.body.classList.remove('no-scroll')
     }
+  }
+  closeNav() : void {
+    this.toggle = false;
+    this.document.body.classList.remove('no-scroll');
   }
 }
