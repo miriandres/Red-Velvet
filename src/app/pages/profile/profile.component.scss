@@ -17,7 +17,7 @@
         margin: auto;
         @include flex( row, nowrap, center, center );
     }
-    .imagen {
+    .img {
         position: relative;
         width: 700px;
         min-height: 700px;
@@ -38,11 +38,11 @@
             top: 0;
             animation: fadeInUp 1.5s ease .8s both;
         }
-        &__silueta {
+        &__shape {
             opacity: .7;
             transition: all .5s ease;
         
-            &.activo {
+            &.active {
                 opacity: 1;
             }
         }
@@ -87,7 +87,7 @@
             opacity: 0;
             transition: all .2s ease;
         }
-        &__profile.activo {
+        &__profile.active {
             opacity: 1;
         }
         &__h2 {
