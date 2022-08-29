@@ -95,9 +95,9 @@
         &__span {
             margin: 0 .2em;
         }
-        &__activo {
+        &__active {
             font-weight: bold;
-            color: var(--softpink);
+            color: var(--c-accent);
         }
     }
     .noticia {
@@ -111,7 +111,7 @@
         &__num {
             margin-right: 1em;
             font-weight: bold;
-            color: var(--softpink);
+            color: var(--c-accent);
         }
         
         &__header {
@@ -121,7 +121,7 @@
 
         &__date {
             font-size: .8em;
-            color: var(--grey);
+            color: var(--c-grey-500);
         }
     }
 }
