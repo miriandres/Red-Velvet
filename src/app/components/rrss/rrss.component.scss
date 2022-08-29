@@ -4,8 +4,8 @@
     position: fixed;
     bottom: 2em;
     left: 2.2em;
-    z-index: 6;
     transition: all .5s ease;
+    z-index: 2;
     @include flex( column, nowrap, center, center );
     
     @include media(m){
@@ -14,15 +14,13 @@
         left: calc(50% - 150px);
         flex-direction: row;
     }
-
     &__li {
         margin: 1.5em 0 0;
-        transition: all .3s ease-out;
+        transition: transform .3s ease-out;
 
         @include media(s){
             margin: 0 .5em 0;
         }
-
         &:hover {
             transform: scale(1.2);
         }
