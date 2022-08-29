@@ -8,7 +8,7 @@ import { BbddService } from 'src/app/services/bbdd.service';
 })
 export class VideosComponent implements OnInit {
 
-  foto = -1
+  photo = -1
   videos : any = []
   toggle  : Array<boolean> = Array(17).fill(false)
 
@@ -22,7 +22,7 @@ export class VideosComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  mostrar( x : number ) : void {
-    this.foto = x
+  show( x : number ) : void {
+    this.photo = x
   }
 }
