@@ -9,7 +9,7 @@ import { BbddService } from 'src/app/services/bbdd.service';
 })
 export class GalleryComponent implements OnInit {
 
-  foto = 0
+  photo = 0
   gallery : Array<GalleryData> = []
   toggle  : Array<boolean> = Array(17).fill(false)
 
@@ -25,14 +25,12 @@ export class GalleryComponent implements OnInit {
 
   trackByItems(index: number, item: any) : number {return index;}
 
-// Lightbox ( mostrar / dejar de ver )
-  mostrar( x : number ) : void {
-    this.foto = x
+  show( x : number ) : void {
+    this.photo = x
     this.toggle[x] = !this.toggle[x]
   }
 
-// Cerrar Lightbox al pulsar tecla Escape
   @HostListener('document:keydown.escape', ['$event']) onKeydownHandler(event: KeyboardEvent) {
-    this.toggle[this.foto] = false
+    this.toggle[this.photo] = false
   }
 }
