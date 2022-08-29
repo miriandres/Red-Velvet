@@ -52,7 +52,7 @@ blockquote:before, blockquote:after, q:before, q:after {
 	content: none;
 }
 ::selection {
-    background-color: var(--black);
+    background-color: var(--c-accent);
     color: var(--white);
 }
 
@@ -63,7 +63,6 @@ form , input, textarea, select , button , label{
     hyphens: auto;
     color:inherit;
     background-color: transparent;
-    // appearance: none;
 }
 table , tr , td {
     border-collapse: collapse;
