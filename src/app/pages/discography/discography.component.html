@@ -2,33 +2,33 @@
 
     <div class="wrapper">
         <div class="slider">
-            <div class="grande" [ngStyle]="{ 'transform' : desplazar() }">
-                <div class="grande__panel" *ngFor="let cadaPanel of albums">
-                    <div class="slide" *ngFor="let cadaSlide of cadaPanel">
+            <div class="grande" [ngStyle]="{ 'transform' : translate() }">
+                <div class="grande__panel" *ngFor="let eachPanel of albums">
+                    <div class="slide" *ngFor="let eachSlide of eachPanel">
                         <picture>
-                            <source type="image/webp" [srcset]=" cadaSlide.srcset ">
+                            <source type="image/webp" [srcset]=" eachSlide.srcset ">
                             <img 
                                 class="slide__img" 
-                                [src]=" cadaSlide.src" 
-                                [alt]=" cadaSlide.alt">
+                                [src]=" eachSlide.src" 
+                                [alt]=" eachSlide.alt">
                         </picture>
                         <picture>
-                            <source type="image/webp" [srcset]=" cadaSlide.webpLogo ">
+                            <source type="image/webp" [srcset]=" eachSlide.webpLogo ">
                             <img 
                                 class="slide__logo"
-                                [src]=" cadaSlide.logo" 
-                                [alt]=" cadaSlide.alt ">   
+                                [src]=" eachSlide.logo" 
+                                [alt]=" eachSlide.alt ">   
                         </picture>
                     </div>
                 </div>
             </div>
 
-            <ul class="slider__puntos">
+            <ul class="slider__dots">
                 <li 
-                    class="slider__punto"
-                    *ngFor="let cadaPunto of albums; index as i"
-                    (click)="cambiar(i)"
-                    [ngClass]="{ 'activo' : posicion === i }">
+                    class="slider__dot"
+                    *ngFor="let eachDot of albums; index as i"
+                    (click)="setPosition(i)"
+                    [ngClass]="{ 'active' : position === i }">
                 </li>
             </ul>
         </div>
