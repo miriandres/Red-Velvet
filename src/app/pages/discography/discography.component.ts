@@ -8,8 +8,8 @@ import { BbddService } from 'src/app/services/bbdd.service';
 })
 export class DiscographyComponent implements OnInit {
 
-  posicion = 0
-  ancho    !: number
+  position = 0
+  width    !: number
   albums   : any = []
 
   constructor(
@@ -21,12 +21,11 @@ export class DiscographyComponent implements OnInit {
   ngOnInit(): void {
   }
 
-// Desplazamiento Slider
-  desplazar() : string {
-    this.ancho = this.albums.length
-    return 'translateX(-' + (this.posicion * ( 100 / this.ancho )) + '%)'
+  translate() : string {
+    this.width = this.albums.length
+    return 'translateX(-' + (this.position * ( 100 / this.width )) + '%)'
   }
-  cambiar( x : number ) : void {
-    this.posicion = x
+  setPosition( x : number ) : void {
+    this.position = x
   }
 }
