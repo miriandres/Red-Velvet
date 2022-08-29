@@ -34,31 +34,31 @@ export class AppService {
   {
     href   : 'https://www.facebook.com/RedVelvet/',
     src    : 'assets/iconos/facebook.svg',
-    title  : 'Página de Facebook',
+    title  : 'Official Facebook',
     alt    : 'Facebook - Red Velvet'
   },
   {
     href   : 'https://twitter.com/RVsmtown',
     src    : 'assets/iconos/twitter.svg',
-    title  : 'Página de Twitter',
+    title  : 'Official Twitter',
     alt    : 'Twitter - Red Velvet'
   },
   {
     href   : 'https://www.instagram.com/redvelvet.smtown',
     src    : 'assets/iconos/instagram.svg',
-    title  : 'Página de Instagram',
+    title  : 'Official Instagram',
     alt    : 'Instagram - Red Velvet'
   },
   {
     href   : 'https://www.youtube.com/redvelvet',
     src    : 'assets/iconos/youtube.svg',
-    title  : 'Página de Youtube',
+    title  : 'Official Youtube',
     alt    : 'Youtube - Red Velvet'
   },
   {
     href   : 'https://weibo.com/RedVelvetofficial',
     src    : 'assets/iconos/weibo.svg',
-    title  : 'Página de Weibo',
+    title  : 'Official Weibo',
     alt    : 'Weibo - Red Velvet'
   }
   ]
