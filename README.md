@@ -3,7 +3,7 @@
 
 <div align="center">
   
-  Final project from the JavaScript, JQuery & Angular bootcamp on Trazos.
+  Master’s Degree in Frontend Development final project from Trazos.
 
   [![Live Site](https://img.shields.io/static/v1?label=&message=Live%20Site&color=fcdfe0&style=for-the-badge)](https://miriandres.github.io/Red-Velvet/)
   [![Github Repository](https://img.shields.io/static/v1?label=&message=Github%20Repository&color=fcdfe0&style=for-the-badge&logo=github&logoColor=black)](https://github.com/miriandres/Red-Velvet/)
