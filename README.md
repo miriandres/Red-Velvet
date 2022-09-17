@@ -48,7 +48,7 @@
 * Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`
 
 ## Contact
-Focused on developing a career as a Junior Frontend developer. Reach me: hello@miriamandres.com
+Focused on developing a career as a Frontend developer. Reach me: hello@miriamandres.com
 
 ## License 📄
 MIT Public License v3.0
