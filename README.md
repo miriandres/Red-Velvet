@@ -14,7 +14,7 @@
 **Miriam Andrés** - *Design & Code*
 * [Website](https://miriamandres.com)
 * [Github](https://github.com/miriandres)
-* [LinkedIn](www.linkedin.com/in/miriamandresdev)
+* [LinkedIn](www.linkedin.com/in/miriandres)
 
 ## Built with 🛠️
 [![Angular](https://img.shields.io/static/v1?label=&message=Angular&color=DD0031&logo=angular&logoColor=white&style=for-the-badge)](https://angular.io/)
